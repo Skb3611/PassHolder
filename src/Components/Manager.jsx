@@ -133,7 +133,9 @@ const Manager = () => {
                   <tr key={uuidv4()}>
                     <td className='p-2 md:p-3'><div className='flex justify-center gap-2 items-center'>{item.site}</div></td>
                     <td className='p-2 md:p-3'><div className='flex justify-center gap-2 items-center'>{item.username}</div></td>
-                    <td className='p-2 md:p-3'><div className='flex justify-center gap-2 items-center font-bold'>{"*".repeat(item.password.length)}</div></td>
+                    <td className='p-2 md:p-3'><div className='flex  justify-center gap-2 items-center'>{"*".repeat(item.password.length)} 
+                  <img src="Icons/copy.svg" alt="" className='cursor-pointer w-4 h-4' onClick={()=>handlecopy(item.password)}/>
+                  </div></td>
                     <td className='p-2 md:p-3 flex justify-center items-center md:gap-3 gap-2'>
                       <div onClick={() => handleedit(item.id)} className='flex flex-col items-center cursor-pointer justify-center font-semibold text-sm'>
                         <lord-icon
